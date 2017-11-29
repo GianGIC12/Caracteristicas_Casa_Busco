@@ -109,7 +109,8 @@ public class Consultas {
 
         objCon.conectar();
 
-        sql = "select id,idAviso,idCaracteristica,valor from mod_aviso_caracteristicas_x_aviso where idCaracteristica>=19 and idCaracteristica<=34";
+        sql = "select id,idAviso,idCaracteristica,valor from mod_aviso_caracteristicas_x_aviso "
+                + "where (idCaracteristica>=1 and idCaracteristica<=18) or (idCaracteristica>=41 and idCaracteristica<=44)";
 
         PreparedStatement stm = objCon.getCon().prepareStatement(sql);
 
@@ -123,6 +124,8 @@ public class Consultas {
              */
             String idCaracteristica = rs.getString("idCaracteristica");
             int id = Integer.parseInt(rs.getString("idAviso"));
+            
+            System.out.println(idCaracteristica+"************");
 
             if (idCaracteristica.equalsIgnoreCase("1")) {
 

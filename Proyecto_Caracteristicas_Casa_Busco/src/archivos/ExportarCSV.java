@@ -77,8 +77,8 @@ public class ExportarCSV {
 
         for (int j = 0; j < 100000; j++) {
 
-           
-
+            if (!subCategoria[j].equalsIgnoreCase("")) {
+                
                 csvOutput.write(j + "");
                 csvOutput.write(subCategoria[j]);
                 csvOutput.write(dormitorios[j]);
@@ -112,6 +112,15 @@ public class ExportarCSV {
                 
 
                 csvOutput.endRecord();
+                
+                
+                
+                
+                
+                
+            }
+
+                
 
          
 
