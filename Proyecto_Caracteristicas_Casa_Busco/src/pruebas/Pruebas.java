@@ -34,12 +34,17 @@ public class Pruebas {
 
         ExportarCSV ex = new ExportarCSV();
 
-        ex.exportarResultados(c.getSubCategoria(), c.getAntiguedad(), c.getArea_Construida(), c.getKilometro(),
-                c.getArea_Total(), c.getAlquilerSemanal(), c.getMedio_Baño(), c.getDormitorios(), c.getBaños(),
-                c.getAlquilerDia(), c.getCamas(), c.getCochera(), c.getFila(), c.getTipoEstadia(),
-                c.getBalneario(), c.getUbicacion(), c.getAlquilerMensual(), c.getPrecio(),
-                c.getMonedaSimbolo(), c.getFecha(), c.getEstadoPublicacion(),
-                c.getPais(), c.getDepartamento());
+        ex.exportarResultados(c.getSubCategoria(),c.getDormitorios(),c.getBaños(), c.getArea_Total(),
+                c.getAntiguedad(),
+            c.getArea_Construida(),c.getKilometro(),c.getMedio_Baño(),c.getCamas(), 
+            c.getCochera(), c.getFila(),
+            c.getTipoEstadia(),c.getBalneario(),c.getUbicacion(),c.getAlquilerMensual(), 
+            c.getAlquilerSemanal(), c.getAlquilerDia(),
+            c.getAlquilerSemanaSanta(),c.getAlquilerAnioNuevo(),c.getAreaOriginal(), 
+            c.getArea_Construida(), c.getUnidadMedidaAreaTerreno(),
+            c.getUnidadMedidaAreaConstruida(),c.getPrecio(),c.getMonedaSimbolo(),c.getFecha(),
+            c.getEstadoPublicacion(),c.getPais(), c.getDepartamento()
+    );
 
     }
 

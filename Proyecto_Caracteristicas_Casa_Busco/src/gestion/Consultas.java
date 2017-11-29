@@ -18,7 +18,8 @@ public class Consultas {
 
     String sql;
     String[] dormitorios, baños, area_Total, antiguedad, area_Construida, kilometro, medio_Baño, camas,
-            cochera, fila, tipoEstadia, balneario, ubicacion, alquilerMensual, alquilerSemanal, alquilerDia, alquilerSemanaSanta, alquilerAnioNuevo, areaOriginal, areaConstruidaOriginal, unidadMedidaAreaTerreno,
+            cochera, fila, tipoEstadia, balneario, ubicacion, alquilerMensual, alquilerSemanal, alquilerDia, 
+            alquilerSemanaSanta, alquilerAnioNuevo, areaOriginal, areaConstruidaOriginal, unidadMedidaAreaTerreno,
             unidadMedidaAreaConstruida;
     String[] subCategoria, monedaSimbolo, fecha, estadoPublicacion, pais, departamento;
 
@@ -645,5 +646,58 @@ public class Consultas {
     public void setDepartamento(String[] departamento) {
         this.departamento = departamento;
     }
+
+    public String[] getAlquilerSemanaSanta() {
+        return alquilerSemanaSanta;
+    }
+
+    public void setAlquilerSemanaSanta(String[] alquilerSemanaSanta) {
+        this.alquilerSemanaSanta = alquilerSemanaSanta;
+    }
+
+    public String[] getAlquilerAnioNuevo() {
+        return alquilerAnioNuevo;
+    }
+
+    public void setAlquilerAnioNuevo(String[] alquilerAnioNuevo) {
+        this.alquilerAnioNuevo = alquilerAnioNuevo;
+    }
+
+    public String[] getAreaOriginal() {
+        return areaOriginal;
+    }
+
+    public void setAreaOriginal(String[] areaOriginal) {
+        this.areaOriginal = areaOriginal;
+    }
+
+    public String[] getAreaConstruidaOriginal() {
+        return areaConstruidaOriginal;
+    }
+
+    public void setAreaConstruidaOriginal(String[] areaConstruidaOriginal) {
+        this.areaConstruidaOriginal = areaConstruidaOriginal;
+    }
+
+    public String[] getUnidadMedidaAreaTerreno() {
+        return unidadMedidaAreaTerreno;
+    }
+
+    public void setUnidadMedidaAreaTerreno(String[] unidadMedidaAreaTerreno) {
+        this.unidadMedidaAreaTerreno = unidadMedidaAreaTerreno;
+    }
+
+    public String[] getUnidadMedidaAreaConstruida() {
+        return unidadMedidaAreaConstruida;
+    }
+
+    public void setUnidadMedidaAreaConstruida(String[] unidadMedidaAreaConstruida) {
+        this.unidadMedidaAreaConstruida = unidadMedidaAreaConstruida;
+    }
+    
+    
+    
+    
+    
 
 }
