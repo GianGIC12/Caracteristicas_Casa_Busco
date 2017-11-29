@@ -18,8 +18,8 @@ public class Consultas {
 
     String sql;
     String[] dormitorios, baños, area_Total, antiguedad, area_Construida, kilometro, medio_Baño, camas,
-            cochera, fila, tipoEstadia, balneario, ubicacion, alquilerMensual, alquilerSemanal, alquilerDia
-            ,alquilerSemanaSanta;
+            cochera, fila, tipoEstadia, balneario, ubicacion, alquilerMensual, alquilerSemanal, alquilerDia, alquilerSemanaSanta, alquilerAnioNuevo, areaOriginal, areaConstruidaOriginal, unidadMedidaAreaTerreno,
+            unidadMedidaAreaConstruida;
     String[] subCategoria, monedaSimbolo, fecha, estadoPublicacion, pais, departamento;
 
     float[] precio;
@@ -42,6 +42,13 @@ public class Consultas {
         alquilerMensual = new String[100000];
         alquilerSemanal = new String[100000];
         alquilerDia = new String[100000];
+
+        alquilerSemanaSanta = new String[100000];
+        alquilerAnioNuevo = new String[100000];
+        areaOriginal = new String[100000];
+        areaConstruidaOriginal = new String[100000];
+        unidadMedidaAreaTerreno = new String[100000];
+        unidadMedidaAreaConstruida = new String[100000];
 
         //****************************//
         subCategoria = new String[100000];
@@ -74,6 +81,13 @@ public class Consultas {
             alquilerMensual[i] = "";
             alquilerSemanal[i] = "";
             alquilerDia[i] = "";
+
+            alquilerSemanaSanta[i] = "";
+            alquilerAnioNuevo[i] = "";
+            areaOriginal[i] = "";
+            areaConstruidaOriginal[i] = "";
+            unidadMedidaAreaTerreno[i] = "";
+            unidadMedidaAreaConstruida[i] = "";
 
             //***************//
             subCategoria[i] = "";
@@ -109,40 +123,52 @@ public class Consultas {
             String idCaracteristica = rs.getString("idCaracteristica");
             int id = Integer.parseInt(rs.getString("idAviso"));
 
-            if (idCaracteristica.equalsIgnoreCase("19")) {
+            if (idCaracteristica.equalsIgnoreCase("1")) {
 
                 dormitorios[id] = rs.getString("valor");
 
-            } else if (idCaracteristica.equalsIgnoreCase("20")) {
+            } else if (idCaracteristica.equalsIgnoreCase("2")) {
                 baños[id] = rs.getString("valor");
-            } else if (idCaracteristica.equalsIgnoreCase("21")) {
+            } else if (idCaracteristica.equalsIgnoreCase("3")) {
                 area_Total[id] = rs.getString("valor");
-            } else if (idCaracteristica.equalsIgnoreCase("22")) {
+            } else if (idCaracteristica.equalsIgnoreCase("4")) {
                 antiguedad[id] = rs.getString("valor");
-            } else if (idCaracteristica.equalsIgnoreCase("23")) {
+            } else if (idCaracteristica.equalsIgnoreCase("5")) {
                 area_Construida[id] = rs.getString("valor");
-            } else if (idCaracteristica.equalsIgnoreCase("24")) {
+            } else if (idCaracteristica.equalsIgnoreCase("6")) {
                 kilometro[id] = rs.getString("valor");
-            } else if (idCaracteristica.equalsIgnoreCase("25")) {
+            } else if (idCaracteristica.equalsIgnoreCase("7")) {
                 medio_Baño[id] = rs.getString("valor");
-            } else if (idCaracteristica.equalsIgnoreCase("26")) {
+            } else if (idCaracteristica.equalsIgnoreCase("8")) {
                 camas[id] = rs.getString("valor");
-            } else if (idCaracteristica.equalsIgnoreCase("27")) {
+            } else if (idCaracteristica.equalsIgnoreCase("9")) {
                 cochera[id] = rs.getString("valor");
-            } else if (idCaracteristica.equalsIgnoreCase("28")) {
+            } else if (idCaracteristica.equalsIgnoreCase("10")) {
                 fila[id] = rs.getString("valor");
-            } else if (idCaracteristica.equalsIgnoreCase("29")) {
+            } else if (idCaracteristica.equalsIgnoreCase("11")) {
                 tipoEstadia[id] = rs.getString("valor");
-            } else if (idCaracteristica.equalsIgnoreCase("30")) {
+            } else if (idCaracteristica.equalsIgnoreCase("12")) {
                 balneario[id] = rs.getString("valor");
-            } else if (idCaracteristica.equalsIgnoreCase("31")) {
+            } else if (idCaracteristica.equalsIgnoreCase("13")) {
                 ubicacion[id] = rs.getString("valor");
-            } else if (idCaracteristica.equalsIgnoreCase("32")) {
+            } else if (idCaracteristica.equalsIgnoreCase("14")) {
                 alquilerMensual[id] = rs.getString("valor");
-            } else if (idCaracteristica.equalsIgnoreCase("33")) {
+            } else if (idCaracteristica.equalsIgnoreCase("15")) {
                 alquilerSemanal[id] = rs.getString("valor");
-            } else if (idCaracteristica.equalsIgnoreCase("34")) {
+            } else if (idCaracteristica.equalsIgnoreCase("16")) {
                 alquilerDia[id] = rs.getString("valor");
+            } else if (idCaracteristica.equalsIgnoreCase("17")) {
+                alquilerSemanaSanta[id] = rs.getString("valor");
+            } else if (idCaracteristica.equalsIgnoreCase("18")) {
+                alquilerAnioNuevo[id] = rs.getString("valor");
+            } else if (idCaracteristica.equalsIgnoreCase("41")) {
+                areaOriginal[id] = rs.getString("valor");
+            } else if (idCaracteristica.equalsIgnoreCase("42")) {
+                areaConstruidaOriginal[id] = rs.getString("valor");
+            } else if (idCaracteristica.equalsIgnoreCase("43")) {
+                unidadMedidaAreaTerreno[id] = rs.getString("valor");
+            } else if (idCaracteristica.equalsIgnoreCase("44")) {
+                unidadMedidaAreaConstruida[id] = rs.getString("valor");
             }
 
         }
@@ -194,8 +220,8 @@ public class Consultas {
                 subCategoria[idAviso] = "Propiedades Islas";
             } else if (idSubcategoria == 10) {
                 subCategoria[idAviso] = "Terrenos";
-            }else{
-                
+            } else {
+
                 subCategoria[idAviso] = "No Definido";
             }
 
@@ -231,10 +257,10 @@ public class Consultas {
 
                 System.out.println("" + fechita + "*******************");
 
-            }else {
-                
-                fechita="1900-01-01";
-                
+            } else {
+
+                fechita = "1900-01-01";
+
             }
 
             fecha[idAviso] = fechita;
@@ -452,7 +478,6 @@ public class Consultas {
         this.baños = baños;
     }
 
- 
     public String[] getArea_Total() {
         return area_Total;
     }
